@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { addEmployeeSuccess, deleteEmployeeSuccess, getEmployee, getEmployeeSuccess, updateEmployeeSuccess } from "../actions/action";
+import { addEmployeeSuccess, deleteEmployeeSuccess, getEmployeeSuccess, updateEmployeeSuccess } from "../actions/action";
 import { employee } from "../employee";
 
 export interface EmployeeState {

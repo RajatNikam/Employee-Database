@@ -1,6 +1,5 @@
-import { Action, createAction, props } from "@ngrx/store";
+import { createAction, props } from "@ngrx/store";
 import { employee } from "../employee";
-import { Update } from "@ngrx/entity";
 
 export const getEmployee = createAction('[Employee] Get Employee')
 
