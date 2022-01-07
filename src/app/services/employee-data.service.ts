@@ -26,7 +26,6 @@ export class EmployeeDataService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-        // 'Authorization': 'this.token'
       })
     };
     return this.https.PostService('http://localhost:3000/ListOfEmployees', data, false, options)
@@ -34,18 +33,14 @@ export class EmployeeDataService {
 
   editData(data: any) {
     console.log('service => editData (1)');
-    
+
     let id = localStorage.getItem('id')
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-        // 'Authorization': 'this.token'
       })
     };
     return this.https.PutService(`${this.url}/${id}`, data, false, options)
-    // .subscribe((response: any) => {
-    //   console.log('service => editData (2)');
-    // })
   }
 
   changemessage(message: any) {
@@ -64,14 +59,12 @@ export class EmployeeDataService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json'
-        // 'Authorization': 'this.token'
       })
     };
     return this.https.DeleteService(`${this.url}/${id}`, options)
   }
 
   redirectTo(url: string): void {
-    // When skipLocationChange true, navigates without pushing a new state into history.
     this.router.navigateByUrl('/').then(() => {
       this.router.navigate([url]);
     });
