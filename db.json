@@ -1,0 +1,273 @@
+{
+  "ListOfEmployees": [
+    {
+      "title": "Mr",
+      "firstName": "Rajat",
+      "lastName": "Nikam",
+      "gender": "Male",
+      "DOB": "1998-12-24T18:30:00.000Z",
+      "maritialStatus": "Unmarried",
+      "city": "Panvel",
+      "phone_numbers": "8450958850",
+      "position": "Junior Software Engineer",
+      "workFormat": "Work From Home",
+      "qualification": "Graduation",
+      "experience": 1,
+      "id": "HT001",
+      "DOJ": "2021-12-13T18:30:00.000Z",
+      "CTC": "4",
+      "email": "rajat.nikam@hotmail.com",
+      "photo": "/assets/faces/1.jpg",
+      "country": "India",
+      "DOB1": "25 December 1998",
+      "DOJ1": "14 December 2021"
+    },
+    {
+      "id": 2,
+      "firstName": "Amar",
+      "lastName": "Kshirsagar",
+      "email": "amar.kshirsagar@hotmail.com",
+      "phone_numbers": "8450958851",
+      "position": "Senior Software Engineer",
+      "photo": "/assets/faces/4.jpg",
+      "country": "India",
+      "city": "Satara",
+      "gender": "Male",
+      "qualification": "Graduation",
+      "experience": "4",
+      "DOB": " ",
+      "workFormat": "Work From Office",
+      "maritialStatus": "Unmarried",
+      "DOJ": " ",
+      "Branch": "Thane",
+      "CTC": "4"
+    },
+    {
+      "id": 3,
+      "firstName": "Akshar",
+      "lastName": "Hate",
+      "email": "akshar.hate@hotmail.com",
+      "phone_numbers": "8450958852",
+      "position": "Team Leader",
+      "photo": "/assets/faces/5.jpg",
+      "country": "India",
+      "city": "Mahad",
+      "gender": "Male",
+      "qualification": "H.S.C.",
+      "experience": "3",
+      "DOB": " ",
+      "maritialStatus": "Unmarried",
+      "DOJ": " ",
+      "workFormat": "Work From Home",
+      "Branch": "Thane",
+      "CTC": "4"
+    },
+    {
+      "title": "Mr",
+      "firstName": "Nilesh",
+      "lastName": "Shinde",
+      "gender": "Male",
+      "DOB": "2021-12-31T18:30:00.000Z",
+      "maritialStatus": "Unmarried",
+      "city": "Phaltan",
+      "phone_numbers": "8450950053",
+      "position": "Assistant Manager",
+      "workFormat": "Work From Office",
+      "qualification": "M.B.A.",
+      "experience": "8",
+      "photo": "/assets/faces/6.jpg",
+      "id": 4,
+      "DOJ": "2022-01-04T18:30:00.000Z",
+      "CTC": "4",
+      "email": "nilesh.shinde@hotmail.com",
+      "country": "India"
+    },
+    {
+      "id": 5,
+      "firstName": "Yogesh",
+      "lastName": "More",
+      "email": "yogesh.more@hotmail.com",
+      "phone_numbers": "8450950054",
+      "position": "DevOps Engineer",
+      "photo": "/assets/faces/7.jpg",
+      "country": "India",
+      "city": "Barshi",
+      "gender": "Male",
+      "qualification": "Diploma",
+      "experience": "6",
+      "DOB": " ",
+      "workFormat": "Work From Office",
+      "maritialStatus": "Unmarried",
+      "DOJ": " ",
+      "Branch": "Thane",
+      "CTC": "4"
+    },
+    {
+      "id": 6,
+      "firstName": "Yogita",
+      "lastName": "More",
+      "email": "yogita.more@hotmail.com",
+      "phone_numbers": "8450950055",
+      "position": "Sales Executive",
+      "photo": "/assets/faces/2.jpg",
+      "country": "India",
+      "city": "Panvel",
+      "gender": "Female",
+      "qualification": "Graduation",
+      "experience": "5",
+      "DOB": " ",
+      "workFormat": "Work From Office",
+      "maritialStatus": "Unmarried",
+      "DOJ": " ",
+      "Branch": "Thane",
+      "CTC": "4"
+    },
+    {
+      "id": 7,
+      "firstName": "Minal",
+      "lastName": "Nimbalkar",
+      "email": "minal.nimb@hotmail.com",
+      "phone_numbers": "8450950056",
+      "position": "Junior Software Engineer",
+      "photo": "/assets/faces/3.jpg",
+      "country": "India",
+      "city": "Panvel",
+      "gender": "Female",
+      "qualification": "Graduation",
+      "experience": "2",
+      "workFormat": "Work From Office",
+      "DOB": " ",
+      "maritialStatus": "Unmarried",
+      "DOJ": " ",
+      "Branch": "Thane",
+      "CTC": "4"
+    },
+    {
+      "id": 8,
+      "firstName": "Axy",
+      "lastName": "Kharade",
+      "email": "axy.kharade@hotmail.com",
+      "phone_numbers": "8450950057",
+      "position": "Junior Software Engineer",
+      "photo": "/assets/faces/8.jpg",
+      "country": "India",
+      "city": "Panvel",
+      "gender": "Male",
+      "qualification": "Diploma",
+      "experience": "5",
+      "DOB": " ",
+      "workFormat": "Work From Office",
+      "maritialStatus": "Unmarried",
+      "DOJ": " ",
+      "Branch": "Thane",
+      "CTC": "4"
+    },
+    {
+      "title": "Mr",
+      "firstName": "Vishal",
+      "lastName": "Bandy",
+      "gender": "Male",
+      "DOB": "2022-01-04T18:30:00.000Z",
+      "maritialStatus": "Unmarried",
+      "city": "Panvel",
+      "phone_numbers": "8450950058",
+      "position": "Junior Software Engineer",
+      "workFormat": "Work From Office",
+      "qualification": "Diploma",
+      "experience": 8,
+      "id": 9,
+      "DOJ": "2022-01-01T18:30:00.000Z",
+      "CTC": "4",
+      "email": "vishal.bandy@hotmail.com",
+      "photo": "/assets/faces/9.jpg",
+      "country": "India",
+      "DOB1": "5 January 2022",
+      "DOJ1": "2 January 2022"
+    },
+    {
+      "title": "Mr",
+      "firstName": "ajit",
+      "lastName": "shirvale",
+      "gender": "Male",
+      "DOB": "2022-01-03T18:30:00.000Z",
+      "maritialStatus": "Unmarried",
+      "city": "panvel",
+      "phone_numbers": "8450958859",
+      "position": "senior",
+      "workFormat": "Work From Office",
+      "qualification": "diploma",
+      "experience": 12,
+      "id": "5ik3gfv",
+      "DOJ": "2022-01-05T18:30:00.000Z",
+      "CTC": "4",
+      "email": "ajitshirvale@hotmail.com",
+      "photo": "assets/faces/12.jpg",
+      "country": "India",
+      "DOB1": "4 January 2022",
+      "DOJ1": "6 January 2022",
+      "type": "[Employee] Add Employee"
+    }
+  ],
+  "photo": [
+    {
+      "id": 1,
+      "photo1": "/assets/faces/1.jpg"
+    },
+    {
+      "id": 2,
+      "photo2": "/assets/faces/2.jpg"
+    },
+    {
+      "id": 3,
+      "photo3": "/assets/faces/3.jpg"
+    },
+    {
+      "id": 4,
+      "photo4": "/assets/faces/4.jpg"
+    },
+    {
+      "id": 5,
+      "photo5": "/assets/faces/5.jpg"
+    },
+    {
+      "id": 6,
+      "photo6": "/assets/faces/6.jpg"
+    },
+    {
+      "id": 7,
+      "photo7": "/assets/faces/7.jpg"
+    },
+    {
+      "id": 8,
+      "photo8": "/assets/faces/8.jpg"
+    },
+    {
+      "id": 9,
+      "photo9": "/assets/faces/9.jpg"
+    },
+    {
+      "id": 10,
+      "photo10": "/assets/faces/10.jpg"
+    },
+    {
+      "id": 11,
+      "photo11": "/assets/faces/11.jpg"
+    },
+    {
+      "id": 12,
+      "photo12": "/assets/faces/12.jpg"
+    },
+    {
+      "id": 13,
+      "photo13": "/assets/faces/13.jpg"
+    },
+    {
+      "id": 14,
+      "photo14": "/assets/faces/14.jpg"
+    },
+    {
+      "id": 15,
+      "photo15": "/assets/faces/15.jpg"
+    }
+  ]
+}

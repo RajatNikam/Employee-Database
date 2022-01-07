@@ -1,0 +1,77 @@
+<div class="detailsh">
+
+    <div>
+        <!-- left-profile -->
+        <div class="photod">
+            <div class="photod2">
+                <img src={{emp1.photo}} width="150px" height="150px" style="border-radius: 100px;">
+
+                <div style="margin-top: 20px;">
+                    <h2>{{emp1.firstName}} {{emp1.lastName}}</h2>
+                    <mat-icon class="space">person</mat-icon>
+                    <p class="info">{{emp1.id}}</p><br>
+                    <mat-icon class="space">work</mat-icon>
+                    <p class="info">{{emp1.position}}</p><br>
+                    <mat-icon class="space">settings</mat-icon>
+                    <p class="info">Engineering</p><br>
+                    <mat-icon class="space">location_on</mat-icon>
+                    <p class="info">Thane</p><br>
+                    <mat-icon class="space">laptop_mac</mat-icon>
+                    <p class="info">{{emp1.workFormat}}</p><br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="job">
+            <h1 style="color: #3f51b5;">Employee Details</h1>
+
+            <details class="detailsSpace">
+                <summary style="font-size: large;">Personal Details</summary>
+                <div style="margin: 20px 20px;">
+                    <p class="field">First Name :</p>
+                    <p class="bold">{{emp1.firstName}}</p>
+                    <p class="field">Last Name :</p>
+                    <p class="bold">{{emp1.lastName}}</p>
+                    <p class="field">Gender :</p>
+                    <p class="bold">{{emp1.gender}}</p>
+                    <p class="field">DOB :</p>
+                    <p class="bold">{{emp1.DOB1}}</p>
+                    <p class="field">Maritial Status :</p>
+                    <p class="bold">Unmarried</p>
+                    <p class="field">Address :</p>
+                    <p class="bold">{{emp1.city}}, India</p>
+                    <p class="field">Contact No. :</p>
+                    <p class="bold">+91 {{emp1.phone_numbers}}</p>
+                    <p class="field">E-mail :</p>
+                    <p class="bold">{{emp1.email}}</p>
+                </div>
+            </details>
+
+            <details class="detailsSpace">
+                <summary style="font-size: large;">Work Details</summary>
+                <div style="margin: 20px 20px;">
+                    <p class="field">Employee Id :</p>
+                    <p class="bold">{{emp1.id}}</p>
+                    <p class="field">Work Status :</p>
+                    <p class="bold">Active</p>
+                    <p class="field">Job Role :</p>
+                    <p class="bold">{{emp1.position}}</p>
+                    <p class="field">Work Format :</p>
+                    <p class="bold">{{emp1.workFormat}}</p>
+                    <p class="field">Qualification :</p>
+                    <p class="bold">{{emp1.qualification}}</p>
+                    <p class="field">Experience :</p>
+                    <p class="bold">{{emp1.experience}} Y</p>
+                    <p class="field">Date Of Joining :</p>
+                    <p class="bold">{{emp1.DOJ1}}</p>
+                    <p class="field">Branch :</p>
+                    <p class="bold">Thane</p>
+                    <p class="field">Cost To Company :</p>
+                    <p class="bold">{{emp1.CTC}} LPA</p>
+                </div>
+            </details>
+        </div>
+
+    </div>
+</div>

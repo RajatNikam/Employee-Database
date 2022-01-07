@@ -1,0 +1,29 @@
+<!-- toolbar -->
+<p class="toolbar">
+    <mat-toolbar class="h" color="primary">
+        <mat-toolbar-row>
+            <mat-icon (click)="dashboard()">portrait</mat-icon>
+            <span style="margin-left: 10px;">Employee Database</span>
+
+            <span class="searchBar">
+                    <mat-icon id="icon">search</mat-icon>
+                <input id="searchbar" type="text" placeholder="Search..." #search (keyup)="shareSearchWord(search.value)" >
+            </span>
+
+            <span class="example-spacer"></span>
+            <span>Hi-Tech Pvt. Ltd.</span>
+        </mat-toolbar-row>
+
+        <mat-toolbar-row>
+            <mat-icon>person_add_alt</mat-icon>
+            <span style="margin-left: 10px;">Add New Employee Data</span>
+            <span class="example-spacer"></span>
+            <button mat-icon-button matTooltip="Add Employee" class="example-icon favorite-icon"
+                aria-label="Example icon-button with heart icon" (click)="addEmployee()">
+                <mat-icon>add</mat-icon>
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</p>
+
+<router-outlet></router-outlet>

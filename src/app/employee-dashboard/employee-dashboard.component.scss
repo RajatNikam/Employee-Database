@@ -1,0 +1,63 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .example-card {
+    max-width: 400px;
+    margin-bottom: 8px;
+  }
+
+  .icon {
+      transform: scale(0.7);
+  }
+
+  .gap {
+    flex: 1 1 auto;
+  }
+
+  .text {
+    margin-top: -26px;
+    margin-left: 25px;
+  }
+
+  .h {
+    position: fixed;
+    top:0px;
+     z-index: 5;
+  }
+
+// searchBar
+  #searchbar{
+    cursor: pointer;
+    background-color: #f1f3f4;
+    border-bottom: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    position: relative;
+    margin-left: 50px;
+    margin-top: 30px;
+    padding: 15px 15px 15px 60px;
+    bottom: 15px;
+    height: 10px;
+    width: 300px;
+    border-radius: 5px;
+}
+
+#icon {
+    position:absolute;
+    margin-top: 14px;
+    margin-left: 60px;
+    padding: 10px 10px 10px 10px;
+    z-index: 2;
+    color: black;
+    opacity: 0.5;
+}
+ 
+// toolbar icon
+
+#icon:hover {
+    transition: 0.2s;
+    background: lightgray;
+    border-radius: 120px;
+}

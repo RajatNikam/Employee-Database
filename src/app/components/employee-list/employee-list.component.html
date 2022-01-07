@@ -1,0 +1,45 @@
+<!-- cards -->
+<div class="cardh" style="display: flex; flex-wrap: wrap; justify-content: start;" fxLayoutAlign="space-evenly center">
+    <div *ngFor="let employe of employee$ | async | filter: searchWord">
+        <mat-card class="example-card" style="border: 1px solid black; padding: 20px 20px; margin: 15px 10px;">
+            <mat-card-title-group>
+                <mat-card-title>{{employe?.firstName}} {{employe?.lastName}}</mat-card-title>
+                <mat-card-subtitle style="font-size: 1.1vw;">
+                    {{employe?.position}}<br><br>
+                    <mat-icon class="icon">email</mat-icon>
+                    <p class="text">{{employe?.email}}</p>
+                    <mat-icon class="icon">phone</mat-icon>
+                    <p class="text">{{employe?.phone_numbers}}</p>
+                    <mat-icon class="icon">home</mat-icon>
+                    <p class="text">{{employe?.city}}, India </p>
+                    <div fxLayoutGap="15px">
+                        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                            <mat-icon matTooltip="description" (click)="details(employe)">description</mat-icon>
+                        </button>
+                        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                            <mat-icon matTooltip="edit" (click)="edit(employe)">edit</mat-icon>
+                        </button>
+                        <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                            <mat-icon matTooltip="delete" (click)="delete(employe.id)">delete</mat-icon>
+                        </button>
+                    </div>
+                </mat-card-subtitle>
+                <div class="gap"></div>
+                <!-- <img mat-card-lg-image src="https://thispersondoesnotexist.com/image" height="400px"> -->
+                <!-- <img mat-card-lg-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"> -->
+                <!-- <div *ngFor="let p of photo" id="pics"> -->
+                <!-- <img src={{employe?.photo}} width="160px" height="230px"> -->
+                <img src={{employe?.photo}} width="160px" height="230px">
+                <!-- </div> -->
+            </mat-card-title-group>
+            <!-- <mat-card-content fxLayoutAlign=" center">
+                <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                    <mat-icon>home</mat-icon>
+                </button>
+                <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </mat-card-content> -->
+        </mat-card>
+    </div>
+</div>

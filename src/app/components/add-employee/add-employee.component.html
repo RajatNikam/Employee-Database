@@ -1,0 +1,410 @@
+main app container
+<div class="card m-3" class="mainform">
+    <h2 class="card-header">Fill Employee Data</h2>
+    <div class="card-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+            <h3>Personal Information</h3>
+
+            <div style="margin-left: -180px;" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        Title<br>
+                        <select formControlName="title" [ngClass]="{ 'is-invalid': submitted && f['title'].errors }"
+                            class="title">
+                            <option value=""></option>
+                            <option value="Mr">Mr</option>
+                            <option value="Mrs">Mrs</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Ms">Ms</option>
+                        </select><br>
+                        <mat-hint *ngIf="submitted && f['title'].errors" class="invalid-feedback">
+                            <mat-hint *ngIf="f['title'].errors['required']" class="hints">Title is required
+                            </mat-hint>
+                        </mat-hint>
+
+                    </p>
+                </div>
+
+                <!-- <div>
+                    <p>
+                        Add Photo<br>
+                        <input type="file" id="myFile" name="filename" formControlName="photo"
+                            [ngClass]="{ 'is-invalid': submitted && f['photo'].errors }">
+                        <mat-icon *ngIf="submitted && f['photo'].errors" class="icons">
+                            <mat-icon *ngIf="f['photo'].errors['required']" color="warn">
+                                error
+                            </mat-icon>
+                        </mat-icon>
+                    </p>
+                </div> -->
+
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        First Name <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="firstName"
+                                [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }">
+                            <mat-hint *ngIf="submitted && f['firstName'].errors">
+                                <mat-hint *ngIf="f['firstName'].errors['required']" class="hints">
+                                    Enter First
+                                    Name</mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['firstName'].errors" class="icons">
+                                <mat-icon *ngIf="f['firstName'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Last Name <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="lastName"
+                                [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }">
+                            <mat-hint *ngIf="submitted && f['lastName'].errors">
+                                <mat-hint *ngIf="f['lastName'].errors['required']" class="hints">
+                                    Enter Last
+                                    Name</mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['lastName'].errors" class="icons">
+                                <mat-icon *ngIf="f['lastName'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="margin-left: 150px;" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div class="needcorrections">
+                    <p>
+                        Gender<br>
+                        <mat-button-toggle-group name="fontStyle" aria-label="Font Style" formControlName="gender"
+                            [ngClass]="{ 'is-invalid': submitted && f['gender'].errors }">
+                            <mat-button-toggle matTooltip="Male" value="Male">
+                                <mat-icon>male</mat-icon>
+                            </mat-button-toggle>
+                            <mat-button-toggle matTooltip="Female" value="Female">
+                                <mat-icon>female</mat-icon>
+                            </mat-button-toggle>
+                        </mat-button-toggle-group>
+                        <mat-icon *ngIf="submitted && f['gender'].errors" class="icons">
+                            <mat-icon *ngIf="f['gender'].errors['required']" color="warn">
+                                error
+                            </mat-icon>
+                        </mat-icon>
+                        <!-- <mat-hint *ngIf="submitted && f['gender'].errors" class="invalid-feedback">
+                                <mat-hint *ngIf="f['gender'].errors['required']" class="hints">Gender is required
+                                </mat-hint>
+                            </mat-hint> -->
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        DOB <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker" (dateChange)="yourFunctionName($event.value)" formControlName="DOB"
+                                [ngClass]="{ 'is-invalid': submitted && f['DOB'].errors }">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+
+                            <mat-hint *ngIf="submitted && f['DOB'].errors">
+                                <mat-hint *ngIf="f['DOB'].errors['required']" class="hints">
+                                    Enter Date of Birth
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['DOB'].errors" class="icons2">
+                                <mat-icon *ngIf="f['DOB'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+
+
+                        <!-- <mat-form-field appearance="outline" style="width: 300px;">
+                                <input matInput type="date" formControlName="DOB"
+                                    [ngClass]="{ 'is-invalid': submitted && f['DOB'].errors }">
+                                <mat-hint *ngIf="submitted && f['DOB'].errors">
+                                    <mat-hint *ngIf="f['DOB'].errors['required']" class="hints">
+                                        Enter First
+                                        Name</mat-hint>
+                                </mat-hint>
+                                <mat-icon *ngIf="submitted && f['DOB'].errors" class="icons">
+                                    <mat-icon *ngIf="f['DOB'].errors['required']" color="warn">
+                                        error
+                                    </mat-icon>
+                                </mat-icon>
+                            </mat-form-field> -->
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="margin-left: 110px;" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        Maritial Status <br>
+                        <mat-radio-group aria-label="Select an option" formControlName="maritialStatus"
+                            [ngClass]="{ 'is-invalid': submitted && f['maritialStatus'].errors }">
+                            <mat-radio-button value="Married">Married</mat-radio-button>
+                            <mat-radio-button value="Unmarried" style="margin-left: 20px;">Unmarried</mat-radio-button>
+                            <mat-icon *ngIf="submitted && f['maritialStatus'].errors" class="icons">
+                                <mat-icon *ngIf="f['maritialStatus'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-radio-group>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Email <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="email"
+                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                            <mat-hint *ngIf="submitted && f['email'].errors">
+                                <mat-hint *ngIf="f['email'].errors['required']" class="hints">
+                                    Enter Email
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['email'].errors" class="icons">
+                                <mat-icon *ngIf="f['email'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        Address <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="city"
+                                [ngClass]="{ 'is-invalid': submitted && f['city'].errors }">
+                            <mat-hint *ngIf="submitted && f['city'].errors">
+                                <mat-hint *ngIf="f['city'].errors['required']" class="hints">
+                                    Enter Your City
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['city'].errors" class="icons">
+                                <mat-icon *ngIf="f['city'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Contact Number <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput type="text" formControlName="phone_numbers"
+                                [ngClass]="{ 'is-invalid': submitted && f['phone_numbers'].errors }">
+                            <mat-hint *ngIf="submitted && f['phone_numbers'].errors">
+                                <mat-hint *ngIf="f['phone_numbers'].errors['required']" class="hints">
+                                    Enter Contact Number
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['phone_numbers'].errors" class="icons">
+                                <mat-icon *ngIf="f['phone_numbers'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <h3 style="margin-top: 30px;">Work Information</h3>
+
+            <div style="margin-top: 30px;" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <p>Employee ID: <br>
+                    <b>HT{{x}}</b>
+                </p>
+
+                <p>Status <br>
+                    Active<mat-icon>toggle_on</mat-icon>
+                </p>
+
+            </div>
+
+
+            <div style="margin-left: -80px; margin-top: 20px;" fxLayout="row" fxLayoutAlign="center"
+                fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        Job Role <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="position"
+                                [ngClass]="{ 'is-invalid': submitted && f['position'].errors }">
+                            <mat-hint *ngIf="submitted && f['position'].errors">
+                                <mat-hint *ngIf="f['position'].errors['required']" class="hints">
+                                    Enter Your Job Role
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['position'].errors" class="icons">
+                                <mat-icon *ngIf="f['position'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Choose Your Work Format<br>
+                        <select formControlName="workFormat"
+                            [ngClass]="{ 'is-invalid': submitted && f['workFormat'].errors }" class="format">
+                            <option value=""></option>
+                            <option value="Work From Home">Work From Home</option>
+                            <option value="Work From Office">Work From Office</option>
+                        </select><br>
+                        <mat-hint *ngIf="submitted && f['workFormat'].errors" class="invalid-feedback">
+                            <mat-hint *ngIf="f['workFormat'].errors['required']" class="hints">Work Format is required
+                            </mat-hint>
+                        </mat-hint>
+                    </p>
+                </div>
+
+            </div>
+
+            <div style="margin-left: -65px;" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        Qualfications <br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="qualification"
+                                [ngClass]="{ 'is-invalid': submitted && f['qualification'].errors }">
+                            <mat-hint *ngIf="submitted && f['qualification'].errors">
+                                <mat-hint *ngIf="f['qualification'].errors['required']" class="hints">
+                                    Enter Your Qualfication
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['qualification'].errors" class="icons">
+                                <mat-icon *ngIf="f['qualification'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Choose Your Work Experience: {{gridsize.value}} Y<br>
+
+                        <mat-slider thumbLabel #gridsize (change)="updateSetting($event)" [displayWith]="formatLabel"
+                            tickInterval="1" step="1" min="0" max="20" aria-label="units" formControlName="experience"
+                            [ngClass]="{ 'is-invalid': submitted && f['experience'].errors }" class="format">
+                        </mat-slider>
+                        <mat-icon *ngIf="submitted && f['experience'].errors" class="icons" id="experience">
+                            <mat-icon *ngIf="f['experience'].errors['required']" color="warn">
+                                error
+                            </mat-icon>
+                        </mat-icon>
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div style="margin-left: 20px;" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="100px">
+
+                <div>
+                    <p>
+                        Date of Joining <br>
+                        <mat-form-field appearance="fill">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="picker1" (dateChange)="yourFunctionName1($event.value)" formControlName="DOJ"
+                                [ngClass]="{ 'is-invalid': submitted && f['DOJ'].errors }">
+                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                            <mat-datepicker #picker1></mat-datepicker>
+
+                            <mat-hint *ngIf="submitted && f['DOJ'].errors">
+                                <mat-hint *ngIf="f['DOJ'].errors['required']" class="hints">
+                                    Enter Date of Joining
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['DOJ'].errors" class="icons2">
+                                <mat-icon *ngIf="f['DOJ'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        Cost To Company (in LPA)<br>
+                        <mat-form-field appearance="outline" style="width: 300px;">
+                            <input matInput formControlName="CTC"
+                                [ngClass]="{ 'is-invalid': submitted && f['CTC'].errors }">
+                            <mat-hint *ngIf="submitted && f['CTC'].errors">
+                                <mat-hint *ngIf="f['CTC'].errors['required']" class="hints">
+                                    Enter Your CTC
+                                </mat-hint>
+                            </mat-hint>
+                            <mat-icon *ngIf="submitted && f['CTC'].errors" class="icons">
+                                <mat-icon *ngIf="f['CTC'].errors['required']" color="warn">
+                                    error
+                                </mat-icon>
+                            </mat-icon>
+                        </mat-form-field>
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="form-group form-check" fxLayoutAlign="center" style="margin-top: 30px;">
+                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input"
+                    [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
+                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions</label>
+                <mat-hint *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback" class="hints"
+                    id="acceptHint">Accept Ts
+                    & Cs is required
+                </mat-hint>
+                <mat-icon *ngIf="submitted && f['acceptTerms'].errors" class="icons" id="acceptIcon">
+                    <mat-icon *ngIf="f['acceptTerms'].errors['required']" color="warn">
+                        error
+                    </mat-icon>
+                </mat-icon>
+            </div>
+
+            <div class="text-center" style="margin-top: 30px;" fxLayoutAlign="center" fxLayoutGap="100px">
+                <button mat-raised-button color="primary">Register</button>
+                <button mat-raised-button type="reset" (click)="onReset()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
