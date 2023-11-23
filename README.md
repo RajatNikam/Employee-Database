@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-rum `json-server --watch db.json --port 3000` for dev server. this will create database for angular app.
+run `json-server --watch db.json --port 3000` for dev server. this will create database for angular app.
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
